@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
     console.log(this.dataSource)
   }
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['Index', 'Codigo', 'Nombre', 'Descripcion', 'Cantidad'];
   //dataSource = ELEMENT_DATA;
 }
 
