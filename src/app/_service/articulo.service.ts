@@ -21,7 +21,7 @@ export class ArticuloService {
   modificar( articulo: Articulo ) {
     return this.http.put( this.url, articulo );
   }
-  eliminar( id: number ) {
-    return this.http.delete( `${this.url}/${id}` );
+  eliminar( codigo: String ) {
+    return this.http.delete( `${this.url}/${codigo}` );
   }
 }

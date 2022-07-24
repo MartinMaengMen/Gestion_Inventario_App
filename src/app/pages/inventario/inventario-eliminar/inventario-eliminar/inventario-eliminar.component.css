@@ -1,0 +1,14 @@
+.example-form {
+    min-width: 200x;
+    max-width: 300px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .center{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }

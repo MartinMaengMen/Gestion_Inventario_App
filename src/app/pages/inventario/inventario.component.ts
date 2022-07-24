@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { MatTableDataSource } from '@angular/material/table';
+import { Route } from '@angular/router';
+import { Articulo } from 'src/app/_model/articulo';
 import { ArticuloService } from 'src/app/_service/articulo.service';
 
 @Component({
@@ -9,9 +11,11 @@ import { ArticuloService } from 'src/app/_service/articulo.service';
 })
 export class InventarioComponent implements OnInit {
 
-  constructor(private router : Router, private articuloService : ArticuloService) { }
+  dataSource:MatTableDataSource<Articulo>
+  constructor(private articuloService : ArticuloService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.articuloService.listar().subscribe(data=>{this.dataSource = new MatTableDataSource(data);});
   }
-
+  displayedColumns: string[] = ['Index', 'Codigo', 'Nombre', 'Descripcion', 'Cantidad'];
 }

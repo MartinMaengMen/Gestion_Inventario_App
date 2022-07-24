@@ -1,0 +1,28 @@
+<div class="center">
+      <mat-card class="example-mat-card" style="align-self: center; padding: 30px;">
+        <div style="display: flex; justify-content: center;">
+          <mat-card-title>Modificar Artículo</mat-card-title>
+        </div>
+        <form class="example-form" [formGroup]="form" style="padding-top: 10px;" (ngSubmit)="onSubmit()">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Código</mat-label>
+            <input type="text" formControlName="codigo" matInput>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input type="text" formControlName="nombre" matInput>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Descripción</mat-label>
+            <input type="text" formControlName="descripcion" matInput>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Cantidad Inicial</mat-label>
+            <input type="number" formControlName="cantidad" matInput>
+          </mat-form-field>
+          <div style="display: flex; justify-content: center;">
+            <button mat-raised-button type="submit">Enviar</button>
+          </div>
+        </form>
+      </mat-card>
+    </div>
